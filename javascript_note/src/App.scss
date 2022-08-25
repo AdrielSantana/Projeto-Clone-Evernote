@@ -1,0 +1,10 @@
+@charset 'utf-8';
+@import "./assets/styles/custom_colors.scss";
+
+$theme-colors: (
+  "custom-purple": ($custom-purple),
+  "custom-purple-darker": ($custom-purple-darker)
+);
+
+//import to booststrap
+@import "~bootstrap/scss/bootstrap";
