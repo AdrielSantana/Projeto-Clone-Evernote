@@ -3,15 +3,14 @@
 
 ------------------------------
 
-### Front-End
+### Back-End
 
 Lista das tecnologias que utilizei:
 
-* HTML5
-* CSS3
-* SASS
-* BootStrap
 * JavaScript
-* React
+* NodeJS
+* Express
+* Mongoose
+* MongoDB
 
 # EM CONSTRUÇÃO

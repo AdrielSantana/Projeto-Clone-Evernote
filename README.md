@@ -1,5 +1,5 @@
 
-# Clone Evernote
+# Tomenota - Clone Evernote
 
 ------------------------------
 
