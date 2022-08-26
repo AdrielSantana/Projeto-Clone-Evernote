@@ -2,8 +2,15 @@
 @import "./assets/styles/custom_colors.scss";
 
 $theme-colors: (
-  "custom-purple": ($custom-purple),
-  "custom-purple-darker": ($custom-purple-darker)
+  "custom-purple-lighter": ($custom-purple-lighter),
+  "custom-purple-medium": ($custom-purple-medium),
+  "custom-purple-darker": ($custom-purple-darker),
+
+  "custom-white": ($custom-white),
+
+  "custom-orange-lighter": ($custom-orange-lighter),
+  "custom-orange-medium": ($custom-orange-medium),
+  "custom-orange-darker": ($custom-orange-darker)
 );
 
 //import to booststrap
