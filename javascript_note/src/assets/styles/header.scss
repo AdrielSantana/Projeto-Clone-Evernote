@@ -1,0 +1,109 @@
+@import './custom_colors.scss';
+
+.nav {
+    padding-top: 1.5rem;
+}
+
+.brand {
+    width: 70px;
+    height: auto;
+    margin-right: 1rem;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.hamburguer {
+    width: 35px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.hamburguer-button {
+    --bs-btn-padding-y: 0rem;
+    --bs-btn-padding-x: 0rem;
+}
+
+.register-button {
+    color: $custom-purple-medium !important;
+    margin-left: 32px;
+    width: 100px !important;
+    height: 50px !important;
+    border-radius: 100px !important;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.register-button:hover {
+    border-color: $custom-purple-medium !important;
+    color: $custom-purple-medium !important;
+}
+
+.brand-title {
+    color: $custom-white  !important;
+    text-decoration: none !important;
+}
+
+// Animação Botão Nav
+
+.cta {
+    border: none;
+    background: none;
+}
+
+.cta span {
+    padding-bottom: 7px;
+}
+
+.hover-underline-animation {
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.hover-underline-animation-card {
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.hover-underline-animation:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1.5px;
+    bottom: 0;
+    left: 0;
+    background-color: $custom-orange-medium;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation-card:hover {
+    transition: 0.5s;
+}
+
+.hover-underline-animation-card:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1.5px;
+    bottom: 0;
+    left: 0;
+    background-color: $custom-orange-medium;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.cta:hover .hover-underline-animation:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.cta:hover .hover-underline-animation-card:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+@media (max-width: 766px) {
+    .brand {
+        width: 50px;
+        height: 50px;
+    }
+}

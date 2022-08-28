@@ -1,5 +1,12 @@
 @charset 'utf-8';
+@import './assets/styles/typography.scss';
 @import "./assets/styles/custom_colors.scss";
+@import "./assets/styles/header.scss";
+
+.main-container{
+  width: 100vw;
+  height: 100vh;
+}
 
 $theme-colors: (
   "custom-purple-lighter": ($custom-purple-lighter),
@@ -12,6 +19,13 @@ $theme-colors: (
   "custom-orange-medium": ($custom-orange-medium),
   "custom-orange-darker": ($custom-orange-darker)
 );
+
+// $offcanvas-padding-y:               $modal-inner-padding;
+// $offcanvas-padding-x:               $modal-inner-padding;
+$offcanvas-horizontal-width:        300px;
+$offcanvas-transition-duration:     .5s;
+$offcanvas-bg-color:                $custom-purple-darker;
+$offcanvas-border-width:            0px;
 
 //import to booststrap
 @import "~bootstrap/scss/bootstrap";
