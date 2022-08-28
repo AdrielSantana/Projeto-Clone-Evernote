@@ -1,5 +1,32 @@
-html, body, #root {
+html,
+body,
+#root {
+  scroll-behavior: smooth;
   margin: 0;
   padding: 0;
   height: 100%;
+}
+
+::selection {
+  color: #281852;
+  background: #FF6D00;
+}
+
+body::-webkit-scrollbar {
+  width: 6px;
+  /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: #130B27;
+  /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #FF8500;
+  /* color of the scroll thumb */
+  border-radius: 20px;
+  /* roundness of the scroll thumb */
+  border: transparent
+    /* creates padding around scroll thumb */
 }

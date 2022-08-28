@@ -1,16 +1,12 @@
 import React, { Fragment } from 'react'
 import './App.scss';
 
-import Header from './components/header';
-
-import Container from 'react-bootstrap/esm/Container';
+import RoutesNav from './routes'
 
 const App = () => {
   return (
     <Fragment>
-      <Container className='purple-gradient-bg main-container' fluid>
-      <Header/>
-      </Container>
+      <RoutesNav/>
     </Fragment>
   )
 }

@@ -1,0 +1,33 @@
+@import './custom_colors.scss';
+
+.footer-height{
+    height: 90px;
+}
+
+.footer-bg {
+    color: $custom-white;
+    height: 90px;
+    background-color: $custom-purple-darker;
+}
+
+.footer {
+    width: 100%;
+}
+
+.footer-col {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+
+    p {
+        margin-bottom: 0px !important;
+    }
+}
+
+.owner {
+    text-decoration: none;
+}
+
+.owner:hover {
+    color: $custom-purple-lighter!important;
+    transition: 0.3s;
+}

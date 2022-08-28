@@ -3,7 +3,7 @@ import Container from 'react-bootstrap/esm/Container';
 import Nav from 'react-bootstrap/Nav';
 import Button from 'react-bootstrap/Button'
 import Offcanvas from 'react-bootstrap/Offcanvas';
-import '../../assets/styles/header.scss'
+import '../../assets/styles/header_home.scss'
 
 import hamburguer from '../../assets/images/hamburguer.svg'
 import logoImage from '../../assets/images/logo.svg'
@@ -41,13 +41,15 @@ function Header() {
                             <span className='d-flex justify-content-center align-items-center'>
                                 <Nav.Item>
                                     <a href='/#' className='cta brand-title'>
-                                        <span class="nunito hover-underline-animation">
+                                        <span className="nunito hover-underline-animation">
                                             Entrar
                                         </span>
                                     </a>
                                 </Nav.Item>
+                            </span>
+                            <span className='d-flex justify-content-center align-items-center'>
                                 <Nav.Item>
-                                    <Button className='orange-gradient-bg register-button nunito'>
+                                    <Button className='orange-gradient-bg register-button nunito-bold'>
                                         Registrar
                                     </Button>
                                 </Nav.Item>

@@ -8,6 +8,14 @@ $custom-orange-lighter: #FF9E00;
 $custom-orange-medium: #FF8500;
 $custom-orange-darker: #FF6D00;
 
+.color-white{
+    color: $custom-white!important;
+}
+
+.color-orange{
+    color: $custom-orange-medium!important;
+}
+
 .orange-gradient-bg {
     background: rgb(255, 158, 0) !important;
     background: linear-gradient(135deg, rgba(255, 158, 0, 1) 0%, rgba(255, 109, 0, 1) 100%) !important;
