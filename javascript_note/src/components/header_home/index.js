@@ -3,12 +3,14 @@ import Container from 'react-bootstrap/esm/Container';
 import Nav from 'react-bootstrap/Nav';
 import Button from 'react-bootstrap/Button'
 import Offcanvas from 'react-bootstrap/Offcanvas';
-import '../../assets/styles/header_home.scss'
+import '../../assets/styles/header.scss'
+
+import { Link } from 'react-router-dom'
 
 import hamburguer from '../../assets/images/hamburguer.svg'
 import logoImage from '../../assets/images/logo.svg'
 
-function Header() {
+function HeaderHome() {
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
@@ -22,15 +24,15 @@ function Header() {
 
                     <span className='d-flex'>
                         <Nav.Item className='align-items-center'>
-                            <a href='/#'>
+                            <Link to='/'>
                                 <img src={logoImage} className='brand' alt='logo'>
                                 </img>
-                            </a>
+                            </Link>
                         </Nav.Item>
                         <Nav.Item>
-                            <a href='/#' className='font-3 courgette brand-title'>
+                            <Link to='/' className='font-3 courgette brand-title'>
                                 Tomenote
-                            </a>
+                            </Link>
                         </Nav.Item>
                     </span>
 
@@ -40,18 +42,20 @@ function Header() {
                         <Offcanvas.Body>
                             <span className='d-flex justify-content-center align-items-center'>
                                 <Nav.Item>
-                                    <a href='/#' className='cta brand-title'>
+                                    <Link to='/login' className='cta brand-title'>
                                         <span className="nunito hover-underline-animation">
                                             Entrar
                                         </span>
-                                    </a>
+                                    </Link>
                                 </Nav.Item>
                             </span>
                             <span className='d-flex justify-content-center align-items-center'>
                                 <Nav.Item>
-                                    <Button className='orange-gradient-bg register-button nunito-bold'>
-                                        Registrar
-                                    </Button>
+                                    <Link to='/register'>
+                                        <Button className='orange-gradient-bg register-button nunito-bold'>
+                                            Registrar
+                                        </Button>
+                                    </Link>
                                 </Nav.Item>
                             </span>
                         </Offcanvas.Body>
@@ -66,4 +70,4 @@ function Header() {
     )
 }
 
-export default Header
+export default HeaderHome

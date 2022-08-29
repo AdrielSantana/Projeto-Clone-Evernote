@@ -16,12 +16,14 @@ $custom-orange-darker: #FF6D00;
     color: $custom-orange-medium!important;
 }
 
+.color-purple{
+    color: $custom-purple-medium!important;
+}
+
 .orange-gradient-bg {
-    background: rgb(255, 158, 0) !important;
     background: linear-gradient(135deg, rgba(255, 158, 0, 1) 0%, rgba(255, 109, 0, 1) 100%) !important;
 }
 
 .purple-gradient-bg {
-    background: rgb(104, 61, 209) !important;
     background: linear-gradient(135deg, rgba(104, 61, 209, 1) 0%, rgba(19, 11, 39, 1) 140%) !important;
 }

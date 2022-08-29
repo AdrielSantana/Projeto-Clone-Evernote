@@ -48,18 +48,18 @@
 }
 
 .register-button-home {
+    --bs-btn-padding-y: 1rem!important; --bs-btn-padding-x: 2rem!important;
     margin-top: 16px;
     color: $custom-purple-medium !important;
-    width: 500px !important;
-    height: 80px !important;
     border-radius: 100px !important;
-    border-color: $custom-purple-medium !important;
+    border-color: $custom-orange-medium !important;
     filter: drop-shadow(0px 8px 4px rgba(0, 0, 0, 0.25));
 }
 
 .register-button-home:hover {
     border-color: $custom-purple-medium !important;
-    color: $custom-purple-medium !important;
+    color: $custom-orange-medium !important;
+    background: linear-gradient(135deg, rgba(104, 61, 209, 1) 0%, rgba(19, 11, 39, 1) 140%) !important;
 }
 
 @media (max-width: 991px) {

@@ -4,6 +4,8 @@ import '../../assets/styles/home_screen.scss';
 import Header from '../../components/header_home';
 import Footer from '../../components/footer';
 
+import { Link } from 'react-router-dom'
+
 import Row from 'react-bootstrap/esm/Row';
 import Col from 'react-bootstrap/esm/Col';
 import Container from 'react-bootstrap/esm/Container';
@@ -26,7 +28,7 @@ const HomeScreen = () => {
                     <Container>
                         <Row>
 
-                        <Col className='d-flex'>
+                            <Col className='d-flex'>
                                 <Container className='d-flex align-self-center text-body flex-column'>
                                     <p className='home-text color-white font-2-5 courgette text-nowrap'>
                                         Crie notas facilmente
@@ -43,9 +45,11 @@ const HomeScreen = () => {
                                         O conforto de anotar suas pendências de forma organizada e prática.
                                     </p>
                                     <Container className='d-flex justify-content-center'>
-                                        <Button className='font-2 justify-self-center text-nowrap orange-gradient-bg register-button-home nunito'>
-                                            Registre-se grátis agora
-                                        </Button>
+                                        <Link to='/register'>
+                                            <Button className='font-2 justify-self-center text-nowrap orange-gradient-bg register-button-home nunito'>
+                                                Registre-se grátis agora
+                                            </Button>
+                                        </Link>
                                     </Container>
 
                                 </Container>

@@ -7,6 +7,10 @@ body,
   height: 100%;
 }
 
+a{
+  text-decoration: none!important;
+}
+
 ::selection {
   color: #281852;
   background: #FF6D00;

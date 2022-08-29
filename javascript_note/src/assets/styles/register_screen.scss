@@ -1,0 +1,51 @@
+@import './custom_colors.scss';
+
+.principal-card{
+    border: 3px solid $custom-purple-darker;
+    box-shadow: 0px 8px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
+    padding: 30px;
+    width: 600px;
+}
+
+.card-input{
+    border-radius: 100px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    height: 50px;
+}
+
+.link-aqui:hover{
+    color: $custom-white!important;
+    transition: 0.3s;
+}
+
+.confirm-button{
+    width: 140px;
+    border-radius: 100px;
+    border-color: $custom-purple-medium!important;
+}
+
+.confirm-button:hover{
+    border-color: $custom-orange-medium!important;
+    background: linear-gradient(135deg, rgba(255, 158, 0, 1) 0%, rgba(255, 109, 0, 1) 100%) !important;
+    color: $custom-purple-medium!important;
+}
+
+.confirm-row{
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.text-card{
+    margin-bottom: 0px!important;
+}
+
+@media (max-width: 528px) {
+    .confirm-button{
+        margin-bottom: 16px;
+    }
+
+    .card-input{
+        height: auto;
+    }
+}
