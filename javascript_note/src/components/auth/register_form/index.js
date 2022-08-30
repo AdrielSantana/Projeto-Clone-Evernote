@@ -115,7 +115,7 @@ const LoginForm = () => {
                                     </Form.Control.Feedback>
                                     {passwordError &&
                                         (<Form.Control.Feedback>
-                                            Senha diferente
+                                            <p className='text-danger'>Senha diferente</p>
                                         </Form.Control.Feedback>)}
                                 </Form.Group>
 
