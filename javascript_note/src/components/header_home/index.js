@@ -22,8 +22,8 @@ function HeaderHome() {
             <Container>
                 <Nav className="justify-content-between align-items-center">
 
-                    <span className='d-flex'>
-                        <Nav.Item className='align-items-center'>
+                    <span className='d-flex align-items-center'>
+                        <Nav.Item>
                             <Link to='/'>
                                 <img src={logoImage} className='brand' alt='logo'>
                                 </img>

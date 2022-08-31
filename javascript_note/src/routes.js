@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import HomeScreen from './screens/home';
 import RegisterScreen from './screens/auth/register';
 import LoginScreen from './screens/auth/login';
-import NotesScreen from './screens/notes';
+import NotesScreen from './screens/notes/index';
 import UserEditScreen from './screens/users/edit';
 
 import PrivateRoute from './components/auth/private_auth';
@@ -15,25 +15,15 @@ const RoutesNav = () => (
     <Routes>
       <Route path='/' element={<HomeScreen />} />
       <Route path='/register' element={<RegisterScreen />} />
-
-      <Route path='/login' element={
-        <PermissionRoute>
-          <LoginScreen />
-        </PermissionRoute>
       
-      } />
+      <Route element={<PermissionRoute/>}>
+        <Route element={<LoginScreen/>} path='/login' exact/>
+      </Route>
 
-      <Route path='/notes' element={
-        <PrivateRoute>
-          <NotesScreen />
-        </PrivateRoute>
-      } />
-
-      <Route path='/users/edit' element={
-        <PrivateRoute>
-          <UserEditScreen />
-        </PrivateRoute>
-      } />
+      <Route element={<PrivateRoute/>}>
+        <Route element={<NotesScreen/>} path='/notes' exact/>
+        <Route element={<UserEditScreen/>} path='/users/edit' exact/>
+      </Route>
 
     </Routes>
   </BrowserRouter>

@@ -1,0 +1,54 @@
+@import './custom_colors.scss';
+
+.bm-menu{
+    background: $custom-purple-darker;
+    padding-top: 16px;
+}
+
+.header-notes {
+    margin-bottom: 24px;
+}
+
+.button-sider-bar{
+    --bs-btn-padding-y: 0px!important;
+    --bs-btn-padding-x: 0px!important;
+}
+
+.button-sider-bar:focus, .button-sider-bar:active:focus, .button-sider-bar.active:focus{
+    outline:none!important;
+    box-shadow:none!important;
+    border-color: transparent!important;
+}
+
+.button-sider-bar:hover{
+    border-color: transparent;
+}
+
+.side-bar{
+    width: auto;
+    height: 60px;
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.25));
+}
+
+.notes {
+    height: calc(100vh - 120px);
+    margin: 0;
+    width: auto;
+}
+
+.menu-div{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+@media (max-width: 766px) {
+    .notes {
+        height: calc(100vh - 108px);
+    }
+}
+
+@media (max-width: 380px) {
+    .notes {
+        height: calc(100vh - 96px);
+    }
+}

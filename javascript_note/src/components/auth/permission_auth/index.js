@@ -1,14 +1,12 @@
 import React from 'react';
-import {Navigate} from 'react-router-dom';
+import {Navigate, Outlet} from 'react-router-dom';
 
-const permissionRoute = ({children}) => {
+const permissionRoute = () => {
     let userid = localStorage.getItem('token') == null ? false : true;
-    
-    if(userid){
-        return <Navigate to='/notes' replace/>
-    }
 
-    return children
+    return (
+        !userid ? <Outlet/> : <Navigate to='/notes'/>
+    )
 }
 
 export default permissionRoute;
