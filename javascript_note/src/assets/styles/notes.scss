@@ -1,32 +1,82 @@
 @import './custom_colors.scss';
 
-.bm-menu{
-    background: $custom-purple-darker;
+.bm-menu {
+    background: $custom-purple-medium;
     padding-top: 16px;
+    max-height: calc(100vh - 120px);
+}
+
+.bm-menu::-webkit-scrollbar {
+    width: 6px;
+    /* width of the entire scrollbar */
+}
+
+.bm-menu::-webkit-scrollbar-track {
+    background: #130B27;
+    /* color of the tracking area */
+}
+
+.bm-menu::-webkit-scrollbar-thumb {
+    background-color: #FF8500;
+    /* color of the scroll thumb */
+    border-radius: 20px;
+    /* roundness of the scroll thumb */
+    border: transparent
+        /* creates padding around scroll thumb */
+}
+
+.add-note {
+    --bs-btn-padding-y: 0px !important;
+    --bs-btn-padding-x: 0px !important;
+    border: none !important;
+    margin-right: 16px;
+}
+
+.bm-cross {
+    margin-top: 8px;
+    background: $custom-orange-medium;
+}
+
+
+.add-note-icon {
+    width: 40px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .header-notes {
     margin-bottom: 24px;
 }
 
-.button-sider-bar{
-    --bs-btn-padding-y: 0px!important;
-    --bs-btn-padding-x: 0px!important;
-}
-
-.button-sider-bar:focus, .button-sider-bar:active:focus, .button-sider-bar.active:focus{
-    outline:none!important;
-    box-shadow:none!important;
-    border-color: transparent!important;
-}
-
-.button-sider-bar:hover{
-    border-color: transparent;
-}
-
-.side-bar{
-    width: auto;
+.button-sider-bar {
+    --bs-btn-padding-y: 0px !important;
+    --bs-btn-padding-x: 0px !important;
+    border: none !important;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 30px;
     height: 60px;
+}
+
+.button-sider-bar:focus,
+.button-sider-bar:active:focus,
+.button-sider-bar.active:focus,
+.add-note:focus,
+.add-note:active:focus,
+.add-note.active:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+.button-sider-bar:hover,
+.add-note:hover {
+    border: none !important;
+}
+
+.side-bar {
+    width: auto;
+    height: 21px;
     filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.25));
 }
 
@@ -34,9 +84,10 @@
     height: calc(100vh - 120px);
     margin: 0;
     width: auto;
+    background-color: $custom-white;
 }
 
-.menu-div{
+.menu-div {
     padding-left: 0px;
     padding-right: 0px;
 }
@@ -45,10 +96,18 @@
     .notes {
         height: calc(100vh - 108px);
     }
+
+    .bm-menu {
+        max-height: calc(100vh - 108px);
+    }
 }
 
 @media (max-width: 380px) {
     .notes {
         height: calc(100vh - 96px);
+    }
+
+    .bm-menu {
+        max-height: calc(100vh - 96px);
     }
 }
