@@ -8,6 +8,7 @@ import Col from "react-bootstrap/esm/Col";
 import List from './list'
 import NotesService from "../../services/notes";
 import Editor from './editor'
+import Search from './search';
 
 import { push as Menu } from 'react-burger-menu'
 
@@ -67,6 +68,16 @@ const Notes = () => {
         setCurrentNote(updatedNote.data);
     }
 
+    const searchNotes = async (query) => {
+        if (query === '') {
+            fetchNotes()
+        } else {
+            const response = await NotesService.search(query);
+            setNotes(response.data)
+        }
+
+    }
+
     return (
         <Fragment>
 
@@ -83,8 +94,11 @@ const Notes = () => {
 
                         {<Container className="d-flex justify-content-center">
                             <Row className="nunito color-white" style={{ width: '294px' }}>
-                                <Col xs={12}>
-                                    <p>Search...</p>
+                                <Col xs={12} className='d-flex mb-2 align-items-center justify-content-start'>
+                                    <Search
+                                        searchNotes={searchNotes}
+                                        fetchNotes={fetchNotes}
+                                    />
                                 </Col>
                                 <Col xs={12}>
                                     <p>
@@ -129,14 +143,14 @@ const Notes = () => {
                         <p className="mb-0 courgette justify-self-center fs-3 align-self-center">
                             {current_note.title}
                         </p>
-                        <div/>
+                        <div />
                     </Col>
-                        <Container className='p-0 notes-editor'>
-                            <Editor 
+                    <Container className='p-0 notes-editor'>
+                        {!(current_note.id === '') && < Editor
                             note={current_note}
-                            updateNote={updateNote} 
-                            />
-                        </Container>
+                            updateNote={updateNote}
+                        />}
+                    </Container>
                 </Row>
             </Row>
 
