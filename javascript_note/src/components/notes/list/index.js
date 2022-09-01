@@ -17,11 +17,11 @@ function ListNotes(props) {
         {props.notes.map((item, key) =>
           <div key={key} onClick={() => props.selectNote(item._id)} className={(item === props.current_note) ? 'courgette color-purple-darker orange-gradient-bg note-card' : 'courgette color-white purple-gradient-bg note-card'}>
             <p className='title-note fs-5'>
-              {item.title.replace(/(<([^>]+)>)/ig, "").substring(0, 15)}
+              {item.title.slice(0, 15) + '...'}
             </p>
             <img alt='divisor' className='divisor-note' src={divisorNote} />
             <p className='fs-6'>
-              {item.body.replace(/(<([^>]+)>)/ig, "").substring(0, 30)}
+              {item.body.replace(/(<([^>]+)>)/ig, "").substring(0, 30) + '...'}
             </p>
             <p className='d-flex justify-content-between'>
               {Moment(item.created_at).format('DD/MM')}

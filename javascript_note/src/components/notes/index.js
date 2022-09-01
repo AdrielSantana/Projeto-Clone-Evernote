@@ -7,6 +7,7 @@ import Col from "react-bootstrap/esm/Col";
 
 import List from './list'
 import NotesService from "../../services/notes";
+import Editor from './editor'
 
 import { push as Menu } from 'react-burger-menu'
 
@@ -35,6 +36,7 @@ const Notes = () => {
             setCurrentNote(response.data[0])
         } else {
             setNotes([])
+            setCurrentNote({ title: "Comece criando uma nota!", body: "", id: "" })
         }
     }
 
@@ -56,13 +58,22 @@ const Notes = () => {
         fetchNotes();
     }
 
+    const updateNote = async (oldNote, params) => {
+        const updatedNote = await NotesService.update(oldNote._id, params);
+        const index = notes.indexOf(oldNote);
+        const newNotes = notes;
+        newNotes[index] = updatedNote.data;
+        setNotes(newNotes);
+        setCurrentNote(updatedNote.data);
+    }
+
     return (
         <Fragment>
 
             <Row className="m-0">
                 <div className="menu-div">
                     <Menu
-                        pageWrapId={"notes-editor"}
+                        pageWrapId={"slide"}
                         isOpen={isOpen}
                         onStateChange={(state) => setIsOpen(state.isOpen)}
                         disableAutoFocus
@@ -71,7 +82,7 @@ const Notes = () => {
 
 
                         {<Container className="d-flex justify-content-center">
-                            <Row className="nunito color-white" style={{width: '294px'}}>
+                            <Row className="nunito color-white" style={{ width: '294px' }}>
                                 <Col xs={12}>
                                     <p>Search...</p>
                                 </Col>
@@ -97,8 +108,8 @@ const Notes = () => {
                     </Menu>
                 </div>
 
-                <Row xs={12} className='p-0 notes-editor' id="notes-editor">
-                    <Col>
+                <Row xs={12} className='p-0' id="slide">
+                    <Col className="d-flex justify-content-between">
                         <Button onClick={() => setIsOpen(true)} className="d-flex justify-content-center align-items-center button-sider-bar" variant="none" style={{
                             backgroundImage: `url(${slideBg})`
                         }}>
@@ -115,7 +126,17 @@ const Notes = () => {
 
                             />
                         </Button>
+                        <p className="mb-0 courgette justify-self-center fs-3 align-self-center">
+                            {current_note.title}
+                        </p>
+                        <div/>
                     </Col>
+                        <Container className='p-0 notes-editor'>
+                            <Editor 
+                            note={current_note}
+                            updateNote={updateNote} 
+                            />
+                        </Container>
                 </Row>
             </Row>
 

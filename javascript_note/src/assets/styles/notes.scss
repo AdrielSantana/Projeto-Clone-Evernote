@@ -1,5 +1,11 @@
 @import './custom_colors.scss';
 
+.notes-editor {
+    .quill{
+        height: calc(100vh - 224px);
+    }
+}
+
 .bm-menu {
     background: $custom-purple-medium;
     padding-top: 16px;
@@ -100,6 +106,18 @@
     .bm-menu {
         max-height: calc(100vh - 108px);
     }
+
+    .notes-editor {
+        .quill{
+        height: calc(100vh - 212px);}
+    }
+}
+
+@media (max-width: 592px) {
+    .notes-editor {
+        .quill{
+        height: calc(100vh - 237px);}
+    }
 }
 
 @media (max-width: 380px) {
@@ -109,5 +127,10 @@
 
     .bm-menu {
         max-height: calc(100vh - 96px);
+    }
+
+    .notes-editor {
+        .quill{
+        height: calc(100vh - 252px);}
     }
 }
