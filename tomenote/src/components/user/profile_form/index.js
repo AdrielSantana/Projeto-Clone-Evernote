@@ -1,5 +1,4 @@
 import React, { Fragment, useEffect, useState } from 'react';
-import {Link} from 'react-router-dom'
 
 import '../../../assets/styles/form.scss'
 
@@ -91,13 +90,6 @@ const ProfileForm = () => {
                                 <Button className='font-1-5 purple-gradient-bg color-orange confirm-button' type="submit">
                                     Atualizar
                                 </Button>
-                            </Col>
-                            <Col className='d-flex text-center text-nowrap justify-content-center'>
-                                <p className='font-1-5 text-card align-self-center'>
-                                    Volte para as notas <Link to='/notes' className='color-purple link-aqui nunito-italic-bold'>
-                                        Aqui
-                                    </Link>
-                                </p>
                             </Col>
 
                             <Col xs={12}>
