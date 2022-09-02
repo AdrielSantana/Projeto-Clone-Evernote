@@ -16,7 +16,7 @@ function Editor(props) {
         clearTimeout(timer)
         if (source === 'user') {
             setCurrentContent(content)
-            setTimer(setTimeout(() => updateNote(content), 3000))
+            setTimer(setTimeout(() => updateNote(content), 2000))
         }
     }
 

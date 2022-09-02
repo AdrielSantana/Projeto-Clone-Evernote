@@ -13,7 +13,6 @@ function ListNotes(props) {
   return (
     <Fragment>
       <Stack gap={3} className="d-flex align-items-center justify-content-start notes-list">
-
         {props.notes.map((item, key) =>
           <div key={key} onClick={() => props.selectNote(item._id)} className={(item === props.current_note) ? 'courgette color-purple-darker orange-gradient-bg note-card' : 'courgette color-white purple-gradient-bg note-card'}>
             <p className='title-note fs-5'>
@@ -31,7 +30,6 @@ function ListNotes(props) {
             </p>
           </div>
         )}
-
       </Stack>
     </Fragment>
   )
