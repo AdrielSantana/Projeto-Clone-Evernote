@@ -34,6 +34,6 @@ Esse foi o meu primeiro projeto Full-Stack, utilizando de todo conhecimento adqu
 
 > No Back-End ( Feito primeiro ), optei por separar a API da aplicação Client. Utilizei do express e mongoose para fazer a conexão com o banco de dados não relacional local, com requisições de get, post, put e delete para consulta, adição, atualização e remoção como a base para o aplicativo, fazendo testes pelo Postman se estava tudo correto. Ainda no Back-End, para maior segurança utilizei a biblioteca BCrypt, que permite a criptografia para gerar um Token de acesso ( que é pedido para fazer as requisições ) ao invés de guardar a senha no banco de dados, assim torna seguro o armazenamento dos dados dos usuários e acesso às rotas.
 
-> No Front-End utilizei do React junto com o bootstrap para a SPA, que ao meu ver é uma ótima forma de melhorar a UX por conta de sua fluidez de acesso e praticidade em compôr o código em components, dessa forma, o site ficou objetivo e prático.
+> No Front-End utilizei do React junto com o bootstrap para a SPA, que ao meu ver é uma ótima forma de melhorar a UX por conta de sua fluidez de acesso e praticidade em compôr o código em components, dessa forma, o site ficou objetivo e prático. O editor de texto foi da biblioteca QuillJs
 
 > O deploy foi feito na Digital Ocean ( créditos pelo github student ) utilizando da cloud do MongoDB para o banco de dados, aluguei um PaaS adicionando as variáveis locais para acesso ao Mongo cloud e a Api pelo client. O link é o de domínio próprio.
