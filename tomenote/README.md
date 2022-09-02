@@ -13,5 +13,3 @@ Lista das tecnologias que utilizei:
 * BootStrap
 * JavaScript
 * React
-
-# EM CONSTRUÇÃO

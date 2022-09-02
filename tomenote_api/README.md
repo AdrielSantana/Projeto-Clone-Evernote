@@ -12,5 +12,3 @@ Lista das tecnologias que utilizei:
 * Express
 * Mongoose
 * MongoDB
-
-# EM CONSTRUÇÃO
