@@ -24,7 +24,6 @@ const RoutesNav = () => (
         <Route element={<NotesScreen/>} path='/notes' exact/>
         <Route element={<UserEditScreen/>} path='/users/edit' exact/>
       </Route>
-
     </Routes>
   </BrowserRouter>
 )

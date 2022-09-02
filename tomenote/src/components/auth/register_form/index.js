@@ -74,7 +74,7 @@ const LoginForm = () => {
                     <Form noValidate validated={validated} onSubmit={HandleSubmit} className='nunito'>
 
                         <Row>
-                            <Col xs={6}>
+                            <Col xs={12} md={6}>
                                 <Form.Group className="font-1-5 mb-3" controlId="formName">
                                     <Form.Label>Nome</Form.Label>
                                     <Form.Control className='card-input' type="name" required value={name} onChange={e => setName(e.target.value)} />
@@ -84,7 +84,7 @@ const LoginForm = () => {
                                 </Form.Group>
                             </Col>
 
-                            <Col xs={6}>
+                            <Col xs={12} md={6}>
                                 <Form.Group className="font-1-5 mb-3" controlId="formEmail">
                                     <Form.Label>Email</Form.Label>
                                     <Form.Control className='card-input' type="email" required value={email} onChange={e => setEmail(e.target.value)} />
@@ -96,7 +96,7 @@ const LoginForm = () => {
                         </Row>
 
                         <Row>
-                            <Col xs={6}>
+                            <Col sm={12} md={6}>
                                 <Form.Group className="font-1-5 mb-3" controlId="formPassword">
                                     <Form.Label>Senha</Form.Label>
                                     <Form.Control className='card-input' type="password" required value={password} onChange={e => setPassword(e.target.value)} />
@@ -106,7 +106,7 @@ const LoginForm = () => {
                                 </Form.Group>
                             </Col>
 
-                            <Col xs={6}>
+                            <Col sm={12} md={6}>
                                 <Form.Group className="font-1-5 text-nowrap mb-3" controlId="formConfirmPassword">
                                     <Form.Label>Confirmar senha</Form.Label>
                                     <Form.Control className='card-input' type="password" required value={confirmPassword} onChange={e => { setConfirmPassword(e.target.value); differentPassword(e.target.value) }}/>
