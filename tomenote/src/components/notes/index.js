@@ -97,7 +97,6 @@ const Notes = () => {
                         onStateChange={(state) => setIsOpen(state.isOpen)}
                         disableAutoFocus
                         customBurgerIcon={false}
-                        noOverlay
                     >
 
 
