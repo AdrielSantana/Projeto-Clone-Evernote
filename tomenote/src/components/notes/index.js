@@ -78,6 +78,14 @@ const Notes = () => {
 
     }
 
+    const toogleSetIsOpen = () => {
+        if (isOpen){
+            setIsOpen(false)
+        } else {
+            setIsOpen(true)
+        }
+    }
+
     return (
         <Fragment>
 
@@ -125,7 +133,7 @@ const Notes = () => {
 
                 <Row xs={12} className='p-0' id="slide">
                     <Col className="d-flex justify-content-between">
-                        <Button onClick={() => setIsOpen(true)} className="d-flex justify-content-center align-items-center button-sider-bar" variant="none" style={{
+                        <Button onClick={() => toogleSetIsOpen()} className="d-flex justify-content-center align-items-center button-sider-bar" variant="none" style={{
                             backgroundImage: `url(${slideBg})`
                         }}>
                             <img alt="Slide Icon" className="side-bar" src={slidePointer}
