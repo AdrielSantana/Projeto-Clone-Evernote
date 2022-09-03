@@ -13,13 +13,11 @@ const NotesScreen = () => {
         <Fragment>
 
             <Row className='purple-gradient-bg main-container d-flex' xs={1}>
-                <Col className='align-self-start'>
-
+                <Col className='d-flex flex-column align-self-start'>
                     <div className='header-notes'>
                         <Header />
                     </div>
-
-                    <Row className='notes'>
+                    <Row className='flex-shrink-1 notes'>
                         <Col>
                             <Notes />
                         </Col>

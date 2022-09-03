@@ -90,15 +90,15 @@ const Notes = () => {
         <Fragment>
 
             <Row className="m-0">
-                <div className="menu-div">
+                <div id="outer-container" className="menu-div">
                     <Menu
                         pageWrapId={"slide"}
+                        outerContainerId={ "outer-container" }
                         isOpen={isOpen}
                         onStateChange={(state) => setIsOpen(state.isOpen)}
                         disableAutoFocus
                         customBurgerIcon={false}
                     >
-
 
                         {<Container className="d-flex justify-content-center">
                             <Row className="nunito color-white" style={{ width: '294px' }}>
@@ -130,7 +130,7 @@ const Notes = () => {
                     </Menu>
                 </div>
 
-                <Row xs={12} className='p-0' id="slide">
+                <Row xs={12} style={{overflow: 'auto'}} className='p-0' id="slide">
                     <Col className="d-flex justify-content-between">
                         <Button onClick={() => toogleSetIsOpen()} className="d-flex justify-content-center align-items-center button-sider-bar" variant="none" style={{
                             backgroundImage: `url(${slideBg})`

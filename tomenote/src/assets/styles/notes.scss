@@ -1,13 +1,10 @@
 @import './custom_colors.scss';
 
 .notes-editor {
+    height: calc(100vh - 180px);
     .quill {
         height: calc(100vh - 224px);
     }
-}
-
-.menu-div{
-    height: 0px;
 }
 
 .form-floating {
@@ -67,7 +64,7 @@
 }
 
 .header-notes {
-    margin-bottom: 24px;
+    padding-bottom: 24px;
 }
 
 .button-sider-bar {
@@ -125,6 +122,7 @@
     }
 
     .notes-editor {
+        height: calc(100vh - 169px);
         .quill {
             height: calc(100vh - 212px);
         }
@@ -141,6 +139,7 @@
 
 @media (max-width: 670px) {
     .notes-editor {
+        height: calc(100vh - 168px);
         .quill {
             height: calc(100vh - 237px);
         }
@@ -160,6 +159,14 @@
     .notes-editor {
         .quill {
             height: calc(100vh - 228px);
+        }
+    }
+}
+
+@media (max-width: 363px) {
+    .notes-editor {
+        .quill {
+            height: calc(100vh - 250px);
         }
     }
 }
