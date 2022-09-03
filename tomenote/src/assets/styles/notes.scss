@@ -127,13 +127,22 @@
     }
 }
 
-@media (max-width: 592px) {
+@media (max-width: 760px) {
+    .notes-editor {
+        .quill {
+            height: calc(100vh - 215px);
+        }
+    }
+}
+
+@media (max-width: 670px) {
     .notes-editor {
         .quill {
             height: calc(100vh - 237px);
         }
     }
 }
+
 
 @media (max-width: 380px) {
     .notes {
@@ -146,7 +155,7 @@
 
     .notes-editor {
         .quill {
-            height: calc(100vh - 252px);
+            height: calc(100vh - 228px);
         }
     }
 }
