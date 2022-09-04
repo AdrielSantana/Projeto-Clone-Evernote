@@ -12,16 +12,20 @@ const NotesScreen = () => {
     return (
         <Fragment>
 
-            <Row className='purple-gradient-bg main-container d-flex' xs={1}>
+            <Row className='main-container d-flex' xs={1}>
+
                 <Col className='d-flex flex-column align-self-start'>
-                    <div className='header-notes'>
+
+                    <div className='sticky-top purple-gradient-bg header-notes'>
                         <Header />
                     </div>
-                    <Row className='flex-shrink-1 notes'>
+
+                    <Row className='notes'>
                         <Col>
                             <Notes />
                         </Col>
                     </Row>
+
                 </Col>
             </Row>
 

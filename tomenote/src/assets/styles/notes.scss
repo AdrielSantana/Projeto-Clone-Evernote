@@ -1,10 +1,11 @@
 @import './custom_colors.scss';
 
-.notes-editor {
-    height: calc(100vh - 180px);
-    .quill {
-        height: calc(100vh - 224px);
-    }
+.quill{
+    background-color: white!important;
+}
+
+.ql-container{
+    border: none!important;
 }
 
 .form-floating {
@@ -101,7 +102,7 @@
 }
 
 .notes {
-    height: calc(100vh - 120px);
+    // height: calc(100vh - 120px);
     margin: 0;
     width: auto;
     background-color: $custom-white;
@@ -113,60 +114,15 @@
 }
 
 @media (max-width: 766px) {
-    .notes {
-        height: calc(100vh - 108px);
-    }
 
     .bm-menu {
         max-height: calc(100vh - 108px);
     }
-
-    .notes-editor {
-        height: calc(100vh - 169px);
-        .quill {
-            height: calc(100vh - 212px);
-        }
-    }
 }
-
-@media (max-width: 760px) {
-    .notes-editor {
-        .quill {
-            height: calc(100vh - 215px);
-        }
-    }
-}
-
-@media (max-width: 670px) {
-    .notes-editor {
-        height: calc(100vh - 168px);
-        .quill {
-            height: calc(100vh - 237px);
-        }
-    }
-}
-
 
 @media (max-width: 380px) {
-    .notes {
-        height: calc(100vh - 96px);
-    }
 
     .bm-menu {
         max-height: calc(100vh - 96px);
-    }
-
-    .notes-editor {
-        .quill {
-            height: calc(100vh - 228px);
-        }
-    }
-}
-
-@media (max-width: 363px) {
-    .notes-editor {
-        .quill {
-            height: calc(100vh - 250px);
-        }
     }
 }
