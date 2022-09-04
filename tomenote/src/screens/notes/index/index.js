@@ -20,7 +20,7 @@ const NotesScreen = () => {
                         <Header />
                     </div>
 
-                    <Row className='overflow-hidden notes'>
+                    <Row className='notes'>
                         <Col>
                             <Notes />
                         </Col>
