@@ -5,7 +5,7 @@
 
 ### Projeto que se baseia no conceito do App Evernote ( criação e edição de notas )
 
-Esse foi o meu primeiro projeto Full-Stack, utilizando de todo conhecimento adquirido no últimos meses de estudo em programação, foi feito desde os primeiro mockups e planejamentos até o deploy, espero que gostem.
+Esse foi o meu primeiro projeto Full-Stack, utilizando de todo conhecimento adquirido no últimos meses de estudo em programação, foi feito desde os primeiro mockups e planejamentos até o deploy, espero que goste.
 
 #### Para melhor visualização, aqui vai o link do site: [Site Tomenote](https://adrielsan.social)
 ### Lista das tecnologias que utilizei:
