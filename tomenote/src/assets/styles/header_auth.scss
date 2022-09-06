@@ -1,6 +1,10 @@
 @import './custom_colors.scss';
+
 .nav {
     padding-top: 1.5rem;
+    position: sticky;
+    top: 0;
+    left: 0;
 }
 
 .brand {
@@ -19,14 +23,14 @@
     padding: 0px 12px;
 }
 
-.dropdown-icon{
-    background-color: transparent!important;
-    border-color: transparent!important;
+.dropdown-icon {
+    background-color: transparent !important;
+    border-color: transparent !important;
 }
 
-.dropdown-icon:hover{
-    background-color: $custom-orange-darker!important;
-    border-color: transparent!important;
+.dropdown-icon:hover {
+    background-color: $custom-orange-darker !important;
+    border-color: transparent !important;
 }
 
 @media (max-width: 766px) {

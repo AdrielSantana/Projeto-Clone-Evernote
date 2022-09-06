@@ -17,7 +17,7 @@ import userIcon from '../../assets/images/user-icon.svg'
 import hamburguer from '../../assets/images/hamburguer.svg'
 
 
-function HeaderLogged() {
+function HeaderLogged(props) {
 
     const [redirectToHome, setRedirectToHome] = useState(false)
     const [redirectToUsersEdit, setRedirectToUsersEdit] = useState(false)
@@ -51,7 +51,7 @@ function HeaderLogged() {
 
         let lastEmptySpace = name.lastIndexOf(' ')
 
-        if(emptySpace === -1 || lastEmptySpace === -1){
+        if (emptySpace === -1 || lastEmptySpace === -1) {
             return name
         }
 
@@ -110,7 +110,7 @@ function HeaderLogged() {
                         </Offcanvas.Body>
                     </Offcanvas>
 
-                    <Button variant="link" className="d-md-none hamburguer-button" onClick={handleShow}>
+                    <Button variant="link" className="d-md-none hamburguer-button" onClick={!props.isOpen ? handleShow : ''}>
                         <img alt='hamburguer' className='hamburguer' src={hamburguer}></img>
                     </Button>
 

@@ -20,8 +20,8 @@ import addNote from '../../assets/images/add-note.svg'
 import '../../assets/styles/notes.scss'
 
 
-const Notes = () => {
-    const [isOpen, setIsOpen] = useState(false)
+const Notes = (props) => {
+    
 
     const [notes, setNotes] = useState([]);
     const [current_note, setCurrentNote] = useState({ title: "", body: "", id: "" });
@@ -78,14 +78,6 @@ const Notes = () => {
 
     }
 
-    const toogleSetIsOpen = () => {
-        if (isOpen){
-            setIsOpen(false)
-        } else {
-            setIsOpen(true)
-        }
-    }
-
     return (
         <Fragment>
 
@@ -94,8 +86,8 @@ const Notes = () => {
                     <Menu
                         pageWrapId={"slide"}
                         outerContainerId={ "outer-container" }
-                        isOpen={isOpen}
-                        onStateChange={(state) => setIsOpen(state.isOpen)}
+                        isOpen={props.isOpen}
+                        onStateChange={(state) => props.setIsOpen(state.isOpen)}
                         disableAutoFocus
                         customBurgerIcon={false}
                     >
@@ -132,12 +124,12 @@ const Notes = () => {
 
                 <Row xs={12} style={{overflow: 'auto'}} className='p-0' id="slide">
                     <Col className="d-flex justify-content-between">
-                        <Button onClick={() => toogleSetIsOpen()} className="d-flex justify-content-center align-items-center button-sider-bar" variant="none" style={{
+                        <Button onClick={() => props.toogleSetIsOpen()} className="d-flex justify-content-center align-items-center button-sider-bar" variant="none" style={{
                             backgroundImage: `url(${slideBg})`
                         }}>
                             <img alt="Slide Icon" className="side-bar" src={slidePointer}
 
-                                style={!isOpen ? {
+                                style={!props.isOpen ? {
                                     transform: 'rotate(180deg)',
                                     transition: '0.5s'
                                 } : {
