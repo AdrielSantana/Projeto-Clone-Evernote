@@ -7,7 +7,7 @@
 
 Esse foi o meu primeiro projeto Full-Stack, utilizando de todo conhecimento adquirido no últimos meses de estudo em programação, foi feito desde os primeiro mockups e planejamentos até o deploy, espero que goste.
 
-#### Para melhor visualização, aqui vai o link do site: [Site Tomenote](http://www.tomenote.adrielsan.social)
+#### Para melhor visualização, aqui vai o link do site: [Site Tomenote](https://tomenote.adrielsan.pro)
 ### Lista das tecnologias que utilizei:
 
 #### Back-End
