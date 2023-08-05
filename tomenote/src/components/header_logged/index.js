@@ -110,7 +110,9 @@ function HeaderLogged(props) {
                         </Offcanvas.Body>
                     </Offcanvas>
 
-                    <Button variant="link" className="d-md-none hamburguer-button" onClick={!props.isOpen ? handleShow : ''}>
+                    <Button variant="link" className="d-md-none hamburguer-button" onClick={() => {
+                        if(!props.isOpen){handleShow()}
+                    }}>
                         <img alt='hamburguer' className='hamburguer' src={hamburguer}></img>
                     </Button>
 

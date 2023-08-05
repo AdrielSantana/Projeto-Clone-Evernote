@@ -17,17 +17,17 @@ a {
   background: #FF6D00;
 }
 
-body::-webkit-scrollbar {
+*::-webkit-scrollbar {
   width: 6px;
   /* width of the entire scrollbar */
 }
 
-body::-webkit-scrollbar-track {
+*::-webkit-scrollbar-track {
   background: #130B27;
   /* color of the tracking area */
 }
 
-body::-webkit-scrollbar-thumb {
+*::-webkit-scrollbar-thumb {
   background-color: #FF8500;
   /* color of the scroll thumb */
   border-radius: 20px;
